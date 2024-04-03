@@ -11,15 +11,39 @@
 */
 public class Vehicle {
     /**
-     * Test.
+     * Variable for the class.
      *
-     * @param 
+     * @param licensePlateNumber the license plate number on the vehicle
     */
     private String licensePlateNumber = "";
+
+    /**
+     * Variable for the class.
+     *
+     * @param colour of the vehicle
+    */
     private String colour = "";
-    private int doors = 0;
-    private double speed = 0;
-    private double maxSpeed = 0;
+
+    /**
+     * Variables for the class.
+     *
+     * @param doors number of doors on the vehicle
+    */
+    private int doors;
+
+    /**
+     * Variables for the class.
+     *
+     * @param speed of the vehicle
+    */
+    private double speed;
+
+    /**
+     * Variables for the class.
+     *
+     * @param maxSpeed of the vehicle
+    */
+    private double maxSpeed;
 
     /**
      * Creates the base vehicle.
@@ -27,7 +51,7 @@ public class Vehicle {
      * @param startColour the base colour
      * @param startPlateNumber the base license plate number
      * @param startDoors the number of doors
-     * @param startMaxSpeed the maximum speed of the car
+     * @param startMaxSpeed the maximum speed of the vehicle
     */
     public Vehicle(
             String startColour, String startPlateNumber, int startDoors,
@@ -90,11 +114,12 @@ public class Vehicle {
      * @return the string about the vehicle's status
     */
     public String getStatus() {
-        String status = " -> Speed: " + this.speed + "\n";
-        status += " -> MaxSpeed: " + this.maxSpeed + "\n";
-        status += " -> Number of doors: " + this.doors + "\n";
-        status += " -> License Plate: " + this.licensePlateNumber + "\n";
-        status += " -> Color: " + this.colour + "\n";
+        final String lineBreak = "\n";
+        String status = " -> Speed: " + this.speed + lineBreak;
+        status += " -> MaxSpeed: " + this.maxSpeed + lineBreak;
+        status += " -> Number of doors: " + this.doors + lineBreak;
+        status += " -> License Plate: " + this.licensePlateNumber + lineBreak;
+        status += " -> Color: " + this.colour + lineBreak;
 
         return status;
     }
